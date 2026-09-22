@@ -1,10 +1,10 @@
-# Mr. & Mrs. Jackpots — a vintage-Vegas wedding site with a built-in jukebox
+# Mr. & Mrs. Jackpots - a Vegas wedding site with a jukebox
 
-> Our wedding invitation site: a single-page React app with entirely hand-authored animation — neon-flicker headings, scroll-reveal sections, card-suit marquees, a live countdown, scattered polaroids — and a floating music player that embeds our playlist with real now-playing metadata. Zero UI framework.
+> Our wedding invitation site, built in React with neon headings, scroll animations, a countdown, and polaroid photos. A floating jukebox plays our playlist and shows the current track and artist.
 
-🔗 **Live site:** https://mr-and-mrs-jackpots.vercel.app
+**Live site:** https://mr-and-mrs-jackpots.vercel.app
 
-This repo is an overview of a closed-source project. The source is private — I'm happy to walk through it in an interview.
+This repository describes the site. The source code is private.
 
 <p align="center">
   <img src="screenshots/hero.jpg" width="900" alt="Hero with countdown and polaroids">
@@ -14,7 +14,7 @@ This repo is an overview of a closed-source project. The source is private — I
 
 ## Overview
 
-We're getting married at a vintage Vegas chapel on Halloween 2026, and the invitation needed to feel like the venue: neon, retro type, a little bit of showmanship. The site is one React page with no component library and no animation library — every effect is CSS keyframes and small hooks — so the design could be exactly what we wanted rather than what a framework offered.
+We're getting married at a vintage Vegas chapel on Halloween 2026. We wanted the invitation to use the same neon colors and retro type as the venue. I built it as a single React page, using CSS keyframes and hooks for the animations without a component or animation library.
 
 ## Screenshots
 
@@ -34,9 +34,9 @@ We're getting married at a vintage Vegas chapel on Halloween 2026, and the invit
 
 - **Hero** with neon-flicker script headings, a live countdown to the ceremony, and scattered polaroids with hand-written captions.
 - **Scroll-reveal sections** (IntersectionObserver): the venue, ceremony/reception/dress-code details, hotel suggestions, and a two-day itinerary.
-- **Card-suit marquees** that ribbon between sections.
-- **Jukebox** — a floating music player that embeds our wedding playlist via the **YouTube IFrame API**, with true now-playing title/artist metadata, play/pause/skip, and a slide-in panel.
-- **Admin mode** — a password-gated editor with **drag-and-drop itinerary editing**, so the schedule can be adjusted without a deploy.
+- **Card-suit marquees** that scroll between sections.
+- **Jukebox:** A floating player for our wedding playlist, using the YouTube IFrame API. It shows the current title and artist and includes play, pause, and skip controls in a slide-in panel.
+- **Admin mode:** A password-protected editor with drag-and-drop itinerary editing, so we can change the schedule without redeploying the site.
 - Fully responsive down to phone widths.
 
 ## Technologies
@@ -45,17 +45,17 @@ React 19 · Vite · CSS-in-JS + keyframe animations · IntersectionObserver · Y
 
 ## Engineering notes
 
-- **No framework, on purpose.** The whole visual language — flicker timing, marquee speed, polaroid scatter, countdown typography — is bespoke CSS and state; it's a good example of what I can do with the platform alone.
-- **The YouTube IFrame API is fiddly** about load order, autoplay policy, and metadata; the player wraps it in a small state machine so the UI always reflects the real playback state.
-- Photos are pre-sized and lazy-loaded so the hero stays fast on mobile.
+- CSS and React state control the neon flicker, marquee speed, photo positions, and countdown.
+- The music player uses a state machine to handle YouTube API loading, autoplay restrictions, playback state, and track metadata.
+- Photos are pre-sized and lazy-loaded to reduce load time on mobile.
 
 ## Status
 
-Built March–April 2026 (40 commits). Live and in use by our guests.
+Built March - April 2026 (40 commits). Live and in use by our guests.
 
-## Process
+## Development
 
-Built solo with Claude Code as a pair-programmer; design direction by the two of us.
+We chose the design together. I built the site using Claude Code for coding assistance.
 
 ---
 
