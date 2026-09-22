@@ -55,7 +55,7 @@ Built March - April 2026 (40 commits). Live and in use by our guests.
 
 ## Development
 
-We chose the design together. I built the site using Claude Code for coding assistance.
+We chose the design together, and I built the site.
 
 ---
 
